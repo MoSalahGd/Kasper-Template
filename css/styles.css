@@ -1,0 +1,47 @@
+/* global styles and variables */
+:root {
+  --main-color: #19c8fa;
+}
+
+* {
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+}
+/* end---------------------------------------- */
+/* setting up media queries for centering container */
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+/* end--------------------------------------------- */
+/* Start Components */
+
+/* contianer for screens less then 750px */
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+/* end Components */
+
+/* start header */
