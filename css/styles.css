@@ -1,12 +1,18 @@
 /* global styles and variables */
 :root {
   --main-color: rgb(25, 200, 250);
+  --section-padding: 4.5rem;
 }
 
 * {
   box-sizing: border-box;
   text-decoration: none;
   list-style: none;
+}
+
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 body {
@@ -49,6 +55,50 @@ body {
   height: 100%;
   position: relative;
 }
+
+.section-spacing {
+  padding-top: var(--section-padding);
+  padding-bottom: var(--section-padding);
+}
+
+.special-heading {
+  color: black;
+  font-size: 2.5rem;
+  text-align: center;
+  font-weight: 400;
+  text-transform: uppercase;
+  position: relative;
+  margin-bottom: 100px;
+}
+
+.special-heading::before {
+  content: "";
+  height: 3px;
+  width: 122px;
+  background-color: black;
+  position: absolute;
+  bottom: -37px;
+  left: 50%;
+  transform: translate(-50%);
+}
+
+.special-heading:after {
+  content: "";
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  border: 2px solid black;
+  position: absolute;
+  bottom: -45px;
+  left: 50%;
+  transform: translate(-50%);
+  background-color: white;
+}
+
+.special-heading + p {
+  color: rgba(0, 0, 0, 0.5);
+  text-align: center;
+}
 /* end Components */
 
 /* start header */
@@ -58,6 +108,7 @@ header {
   top: 0;
   left: 0;
   right: 0;
+  z-index: 2;
 }
 
 header .container {
@@ -185,6 +236,7 @@ nav .search i {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
+  position: relative;
 }
 
 .intro-text {
@@ -195,7 +247,7 @@ nav .search i {
   padding: 4em 2em;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 690px) {
   .intro-text {
     width: 50%;
   }
@@ -215,6 +267,7 @@ nav .search i {
     border-color: white transparent transparent white;
 
     transform: rotate(-45deg);
+    cursor: pointer;
   }
 
   .overlay::after {
@@ -231,6 +284,7 @@ nav .search i {
     border-width: 5px;
     border-color: transparent white white transparent;
     transform: rotate(-45deg);
+    cursor: pointer;
   }
 }
 
@@ -266,6 +320,7 @@ nav .search i {
   height: 20px;
   border-radius: 50%;
   border: 1px solid white;
+  cursor: pointer;
 }
 
 .blue-circle {
@@ -274,3 +329,121 @@ nav .search i {
 }
 
 /* end landing section */
+/* start services section */
+.services .container .special-heading + p {
+  margin-bottom: 100px;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+  grid-row-gap: 70px;
+  grid-column-gap: 20px;
+}
+
+.services-grid-item {
+  text-align: center;
+}
+
+.services-grid-item-text {
+  padding: 0 1em;
+}
+
+.services-grid-item-text h3 {
+  color: var(--main-color);
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin: 2em 0;
+}
+
+.services-grid-item-text p {
+  color: rgba(0, 0, 0, 0.5);
+  margin: 0;
+}
+
+@media (min-width: 768px) {
+  .services-grid-item {
+    display: flex;
+    text-align: left;
+    gap: 25px;
+  }
+
+  .services-grid-item-text h3 {
+    margin-top: 0;
+  }
+}
+/* end services section */
+/* start features section */
+.features {
+  height: 600px;
+  width: 100%;
+  background-image: url("/assets/images/design-features.jpg");
+  background-size: cover;
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  overflow: hidden;
+}
+
+.features-overlay {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.img-container {
+  display: none;
+  position: absolute;
+  z-index: 2;
+  left: 0;
+  bottom: -65px;
+}
+
+.img-container img {
+  height: 462px;
+}
+
+.features-text {
+  width: 100%;
+  position: relative;
+  z-index: 2;
+  color: white;
+  background-color: rgba(18, 170, 212, 0.7);
+  padding: 3em 2em;
+}
+
+.features-text > p {
+  font-size: 1.5rem;
+  font-weight: 400;
+  margin-top: 0;
+  margin-bottom: 50px;
+}
+
+.feature {
+  display: flex;
+  padding: 1.2em;
+}
+
+.feature > p {
+  margin: 0 0 0 20px;
+  line-height: 12px;
+}
+
+@media (min-width: 768px) {
+  .features-text {
+    width: 56.5%;
+  }
+  .img-container {
+    width: 43%;
+    display: flex;
+    justify-content: center;
+  }
+}
+
+/* end features section */
