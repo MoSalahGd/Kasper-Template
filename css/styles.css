@@ -1,7 +1,7 @@
 /* global styles and variables */
 :root {
   --main-color: rgb(25, 200, 250);
-  --section-padding: 4.5rem;
+  --section-padding: 7.5rem;
 }
 
 * {
@@ -69,6 +69,7 @@ body {
   text-transform: uppercase;
   position: relative;
   margin-bottom: 100px;
+  margin-top: 0;
 }
 
 .special-heading::before {
@@ -336,9 +337,8 @@ nav .search i {
 
 .services-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+  grid-template-columns: 1fr;
   grid-row-gap: 70px;
-  grid-column-gap: 20px;
 }
 
 .services-grid-item {
@@ -365,11 +365,18 @@ nav .search i {
   .services-grid-item {
     display: flex;
     text-align: left;
-    gap: 25px;
+    gap: 20px;
   }
 
   .services-grid-item-text h3 {
     margin-top: 0;
+  }
+}
+
+@media (min-width: 992px) {
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 20px;
   }
 }
 /* end services section */
