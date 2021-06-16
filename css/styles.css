@@ -582,6 +582,7 @@ nav .search i {
   color: white;
   text-align: center;
   padding: 4em 0;
+  max-height: 100%;
 }
 
 .video-text > p:nth-child(1) {
