@@ -19,23 +19,23 @@
   </head>
   <body>
     <div class="page-wrapper">
+      <!-- start header -->
       <header>
         <div class="container">
-          <div class="site-logo">
+          <a href="#" class="site-logo">
             <img
               src="assets/images/logo.png"
               alt="blue floating ghost with the site name"
             />
-          </div>
+          </a>
 
           <nav>
-            <span class="menu-icon">
-              <span></span>
-              <span></span>
-              <span></span>
-            </span>
+            <input type="checkbox" id="check" />
+            <label for="check" class="checkbtn">
+              <i class="fas fa-bars toggle-menu"></i>
+            </label>
             <ul class="navigation-menu">
-              <li><a href="#landing">Home</a></li>
+              <li><a href="#landing" class="active">Home</a></li>
               <li><a href="#services">Services</a></li>
               <li><a href="#portfolio">Portfolio</a></li>
               <li><a href="#about">About</a></li>
@@ -43,12 +43,12 @@
               <li><a href="#contact">Contact</a></li>
             </ul>
             <div class="search">
-              <span class="vertical-line"></span>
               <i class="fas fa-search"></i>
             </div>
           </nav>
         </div>
       </header>
+      <!-- end header -->
 
       <section class="landing">
         <div class="overlay">
