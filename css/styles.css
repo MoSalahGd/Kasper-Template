@@ -386,7 +386,7 @@ nav .search i {
 .features {
   height: 600px;
   width: 100%;
-  background-image: url("/assets/images/design-features.jpg");
+  background-image: url("../assets/images/design-features.jpg");
   background-size: cover;
   position: relative;
 
