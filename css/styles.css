@@ -51,7 +51,6 @@ body {
 }
 
 .page-wrapper {
-  width: 100vw;
   min-width: 350px;
   height: 100%;
   position: relative;
@@ -638,6 +637,7 @@ nav .search i {
 .stats {
   background-image: url("../assets/images/stats.png");
   position: relative;
+  background-size: cover;
 }
 
 .stats::before {
@@ -646,18 +646,17 @@ nav .search i {
   height: 100%;
 
   position: absolute;
-  inset: 0;
+  top: 0;
+  left: 0;
+  right: 0;
   background: rgba(0, 0, 0, 0.6);
 }
 
 .stats .container {
   position: relative;
   z-index: 1;
-  background-color: var(--transparent-color);
-  padding: 4em 2em;
   display: grid;
   grid-template-columns: 1fr;
-  grid-gap: 80px;
 }
 
 @media (min-width: 768px) {
@@ -676,6 +675,8 @@ nav .search i {
   display: grid;
   place-items: center;
   color: white;
+  padding: 4em 2em;
+  background-color: var(--transparent-color);
 }
 .stat .black-circle {
   display: grid;
